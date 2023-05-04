@@ -16,9 +16,6 @@ function App() {
   const { token, removeToken, setToken } = useToken();
 
   return (
-    <div className="vh-100 gradient-custom">
-      <div className="container">
-        <h1 className="page-header text-center">React-JS </h1>
 
         <BrowserRouter>
           <Navbar token={removeToken} />
@@ -32,8 +29,6 @@ function App() {
               
             
         </BrowserRouter>
-      </div>
-    </div>
   );
 }
 
