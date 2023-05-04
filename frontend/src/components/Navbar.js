@@ -5,7 +5,8 @@ import { useNavigate, Link } from "react-router-dom";
 function Navbar(props) {
 
     const navigate = useNavigate();
-
+    const name = localStorage.getItem('name');
+    console.log(name)
     function logMeOut() {
         axios({
             method: "POST",
@@ -37,7 +38,6 @@ function Navbar(props) {
                         </li>
 
                     </ul>
-              
                     {!logged ?
                         <button className="btn btn-outline-success" type="submit" onClick={(e) => { e.preventDefault(); navigate("/login")} }>Login</button>
                         : <button className="btn btn-outline-danger" type="submit" onClick={logMeOut}>Logout</button>}

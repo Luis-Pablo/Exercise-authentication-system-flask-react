@@ -35,9 +35,8 @@ function Profile(props) {
                     console.log(error.response.headers)
                 }
             })
+        
     }
-
-
 
 
     return (
